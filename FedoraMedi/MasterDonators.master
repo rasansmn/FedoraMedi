@@ -1,0 +1,61 @@
+<%@ Master Language="VB" CodeFile="MasterDonators.master.vb" Inherits="MasterDonators" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+     <link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="#CCCCCC">
+    <form id="form1" runat="server">
+    <table align="center" style="width: 780px; height: 48px" cellspacing="0">
+            <tr>
+                <td class="logo" colspan="2" style="height: 64px; background-image: url(images/img1.gif);" align="right">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Portal.aspx">FedoraMedi.com</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="anavi" colspan="2" style="height: 33px; border-top-width: 1px; background-image: url(images/img2.gif); border-bottom-width: 1px; border-bottom-color: #c8c8c8; border-top-color: #c8c8c8; border-right-style: none; border-left-style: none;">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Portal.aspx">Home</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Members.aspx">Members</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Doctors.aspx">Doctors</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Hospitals.aspx">Hospitals</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Clinics.aspx">Clinics</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Donators.aspx">Donators</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Default.aspx?action=logout">Logout</asp:HyperLink>
+                    
+            </tr>
+            <tr>
+                <td align="left" class="setpadding" style="border-top-width: 1px; border-bottom-width: 1px;
+                    border-bottom-color: #c8c8c8; border-top-color: #c8c8c8; height: 447px"
+                    valign="top" colspan="2">
+                        <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" Visible="False">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server" Visible="False">
+                    </asp:ContentPlaceHolder>
+                   
+                    </td>
+            </tr>
+            <tr>
+                <td align="center" class="text1" colspan="2" style="border-top: #c8c8c8 1px solid; height: 26px; background-color: #53b4e7;"
+                    valign="middle">
+                     Copyright 2011:
+            <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="#">FedoraMedi</asp:HyperLink>
+            | Powered By:
+            <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="http://wegaspace.com">Rasan Samarasinghe</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<%@ Master Language="VB" CodeFile="MasterReg.master.vb" Inherits="MasterReg" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="#CCCCCC">
+    <form id="form1" runat="server">
+    <table align="center" style="width: 780px; height: 48px" cellspacing="0">
+            <tr>
+                <td class="logo" colspan="2" style="height: 64px; background-image: url(images/img1.gif);" align="right">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">FedoraMedi.com</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="anavi" colspan="2" style="height: 33px; border-top-width: 1px; background-image: url(images/img2.gif); border-bottom-width: 1px; border-bottom-color: #c8c8c8; border-top-color: #c8c8c8; border-right-style: none; border-left-style: none;">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Doctors.aspx">Doctors</asp:HyperLink>&nbsp;|
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Hospitals.aspx">Hospitals</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Clinics.aspx">Clinics</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Donators.aspx">Donators</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink></td>
+            </tr>
+            <tr>
+                <td align="center" class="setpadding" style="border-top-width: 1px; border-bottom-width: 1px;
+                    border-bottom-color: #c8c8c8; width: 600071px; border-top-color: #c8c8c8;"
+                    valign="top" rowspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td align="left" class="setpadding" style="border-top-width: 1px; border-left: #c8c8c8 1px solid; width: 800px; border-top-color: #c8c8c8; height: 133px; border-bottom: #c8c8c8 1px solid;" valign="top">
+                    <p class ="text"><b>Are you a member?</b></p>
+                    <table style="width: 184px; height: 112px" class ="text">
+                        <tr>
+                            <td style="width: 109px">
+                                Username:</td>
+                            <td style="width: 73px">
+                                <asp:TextBox ID="txtUsername" runat="server" Width="112px" ValidationGroup="login"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 109px; height: 19px">
+                                Password:</td>
+                            <td style="width: 73px; height: 19px">
+                                <asp:TextBox ID="txtPw" runat="server" TextMode="Password" Width="112px" ValidationGroup="login"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="2" style="height: 16px">
+                                <asp:CheckBox ID="chkRemember" runat="server" Font-Size="Smaller" Height="16px" Text="Remember me" AutoPostBack="True" BorderStyle="None" />
+                                &nbsp; &nbsp; &nbsp;
+                                <asp:Button ID="btnLogin" runat="server" Text="Enter" ValidationGroup="login" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="2" style="height: 16px">
+                                <asp:Label ID="lblLogin" runat="server" ForeColor="#C00000" Width="152px"></asp:Label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" class="setpadding" style="border-top-width: 1px; border-left: #c8c8c8 1px solid; width: 800px; border-top-color: #c8c8c8;
+                    height: 44px; border-bottom: #c8c8c8 1px solid;" valign="top">
+                    <b>Not yet a memeber?</b><br /><br />
+                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/RegMember.aspx">Register free</asp:HyperLink>
+              for get our free 
+                    <br />
+                    sevices.
+                    </td>
+            </tr>
+            <tr>
+                <td align="left" class="setpadding" style="border-top-width: 1px; border-bottom-width: 1px;
+                    border-bottom-color: #c8c8c8; border-left: #c8c8c8 1px solid; width: 800px; border-top-color: #c8c8c8;
+                    height: 155px" valign="top">
+                     <strong>Service provider?<br />
+            </strong>
+            <br />
+            Free
+                  Registration for
+              <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/RegDoctor.aspx">Doctors</asp:HyperLink>,
+            &nbsp;<br />
+            <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/RegHospital.aspx">Hospitals</asp:HyperLink>
+            and
+            <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/RegDonator.aspx">Donators</asp:HyperLink>.
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="text1" colspan="2" style="border-top: #c8c8c8 1px solid; height: 26px; background-color: #53b4e7;"
+                    valign="middle">
+                     Copyright 2011:
+            <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="#">FedoraMedi</asp:HyperLink>
+            | Powered By:
+            <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="http://wegaspace.com">Rasan Samarasinghe</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
